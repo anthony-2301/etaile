@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Étoile d'Afrique Mode | L'Élégance Masculine à Kinshasa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#f2ca50",
+                        "on-primary-fixed": "#241a00",
+                        "surface-bright": "#38393a",
+                        "primary-container": "#d4af37",
+                        "secondary": "#c9c6c5",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-dim": "#121414",
+                        "surface-container-highest": "#333535",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-variant": "#333535",
+                        "on-surface-variant": "#d0c5af",
+                        "background": "#121414",
+                        "surface": "#121414",
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0A0A0A;
+            color: #e2e2e2;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-headline {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .premium-hover { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .premium-hover:hover {
+            border-color: #d4af37;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.1);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0c0f0f; }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 10px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+    </style>
+</head>
+<body class="custom-scrollbar overflow-x-hidden text-base selection:bg-primary selection:text-black">
+
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-xl border-b border-surface-container-highest fixed w-full top-0 z-50 transition-colors duration-300" id="main-header">
+    <div class="max-w-container-max mx-auto">
+        <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 h-20">
+            <!-- Logo -->
+            <div class="flex items-center gap-4 z-50">
+                <img alt="Logo Étoile d'Afrique Mode" class="h-10 md:h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCOIKu5PO5EQlHSTUFv0PG5kdSMUMeB3H1MoQLD3V4cPI6achlt15OGBRcxzJcG129Fk2NoCr3UlNNAhkTMm6TNE0At0WazL_tH-XO8cTup37MvdMXiRyk6XxI4swCl7L8gcyG8EhhTAYtw3os_PKOy5qCOW-KesT-fd6t-KFkGkGiEqxQ-bltc0E4LryeCemFYBXqLEv6OkyHo9ZVE87BNERh7obuBznqt0odv5hZP_kw74jgnBrJwWtA2To996zZzA"/>
+                <span class="font-headline text-xl md:text-2xl font-bold text-primary hidden sm:block">Étoile d'Afrique</span>
+            </div>
+
+            <!-- Desktop Menu (Ajout des classes nav-link) -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a class="nav-link text-primary border-b-2 border-primary pb-1 text-sm font-semibold tracking-widest uppercase transition-all duration-300" href="#accueil">Accueil</a>
+                <a class="nav-link text-on-surface-variant border-b-2 border-transparent hover:text-primary pb-1 text-sm font-semibold tracking-widest uppercase transition-all duration-300" href="#collection">Collection</a>
+                <a class="nav-link text-on-surface-variant border-b-2 border-transparent hover:text-primary pb-1 text-sm font-semibold tracking-widest uppercase transition-all duration-300" href="#concept">Concept</a>
+                <a class="nav-link text-on-surface-variant border-b-2 border-transparent hover:text-primary pb-1 text-sm font-semibold tracking-widest uppercase transition-all duration-300" href="#contact">Contact</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4 md:gap-6 z-50">
+                <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">shopping_cart</button>
+                <a class="hidden md:flex bg-primary-container text-on-primary-fixed px-6 py-3 text-sm font-semibold uppercase tracking-widest hover:bg-primary transition-colors" href="https://wa.me/243000000000">
+                    Prendre RDV
+                </a>
+                <button id="menu-toggle" class="lg:hidden material-symbols-outlined text-3xl text-on-surface-variant focus:outline-none">menu</button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-surface-container-highest/95 backdrop-blur-md w-full absolute top-20 left-0 shadow-2xl border-b border-primary/20 transition-all duration-300 ease-in-out opacity-0 max-h-0 overflow-hidden">
+            <div class="flex flex-col px-margin-mobile py-6 gap-6">
+                <a class="nav-link-mobile text-primary text-lg font-semibold tracking-widest uppercase transition-colors" href="#accueil" onclick="closeMenu()">Accueil</a>
+                <a class="nav-link-mobile text-on-surface-variant text-lg font-semibold tracking-widest uppercase transition-colors" href="#collection" onclick="closeMenu()">Collection</a>
+                <a class="nav-link-mobile text-on-surface-variant text-lg font-semibold tracking-widest uppercase transition-colors" href="#concept" onclick="closeMenu()">Concept</a>
+                <a class="nav-link-mobile text-on-surface-variant text-lg font-semibold tracking-widest uppercase transition-colors" href="#contact" onclick="closeMenu()">Contact</a>
+                <a class="bg-primary text-on-primary-fixed px-6 py-4 text-center text-sm font-bold uppercase tracking-widest mt-2" href="https://wa.me/243000000000">
+                    Prendre RDV
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="pt-20">
+    <!-- Hero Section (Ajout de id="accueil") -->
+    <section class="relative min-h-[85vh] flex items-center overflow-hidden py-12 md:py-0" id="accueil">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            
+            <div class="space-y-6 md:space-y-8 reveal mt-10 md:mt-0 order-2 md:order-1 text-center md:text-left">
+                <h1 class="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-[80px] leading-[1.1] font-bold">
+                    L'Élégance <br class="hidden md:block"/><span class="text-primary">Masculine</span><br/> à Kinshasa
+                </h1>
+                <p class="text-secondary text-base md:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Découvrez une collection exclusive portée par son créateur, incarnant l'excellence du sur-mesure africain. Une fusion entre tradition Sapeur et modernité brutale.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                    <a class="bg-primary text-on-primary-fixed px-8 py-4 text-sm font-bold uppercase tracking-widest text-center hover:bg-white transition-colors w-full sm:w-auto" href="#collection">
+                        Voir la Collection
+                    </a>
+                    <a class="border border-white/50 text-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-center hover:bg-white hover:text-black transition-all w-full sm:w-auto" href="#concept">
+                        Notre Héritage
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative h-[450px] sm:h-[550px] md:h-[750px] flex items-center justify-center reveal delay-200 order-1 md:order-2 w-full">
+                <div class="absolute inset-4 md:inset-0 border-[1px] border-surface-container-highest scale-105 md:scale-110 -rotate-3 z-0"></div>
+                <img alt="Créateur en costume rouge" class="w-full h-full object-cover object-top relative z-10 grayscale-[0.3] hover:grayscale-0 transition-all duration-700 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUKIdhRaaIEYb0QEf36ubQ9KvMI1oNXvZVGIChAVp4LKFkDI4Szw9nmyqKtCp8YmofMW9ufnuyqgHvWs0Oz_m33Yt3G5wiAUVs765oa11aOENtJobdiJnoi76n7PPzB1yY6y2dmJZe8Xg0ATY7bVXlJ9nyafxppMjTLe3_XmxUOUdisrOjNYfRimLm0k49SkErZj9cfVn28uzC6zlzdD5NkF4iVDP0yQ3ZwFrgYy9Sxx5wZwtV2NiHN9D2BJxB5OWrkA"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="py-20 md:py-32 bg-surface-container-lowest" id="collection">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-6 reveal">
+                <div>
+                    <span class="text-primary text-xs md:text-sm font-bold uppercase tracking-[0.4em] mb-4 block">La Collection de Kinshasa</span>
+                    <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">Incarner le Prestige</h2>
+                </div>
+                <p class="text-on-surface-variant text-sm md:text-base max-w-md border-l-2 border-primary pl-4 md:pl-6 lg:pb-2">
+                    Chaque pièce est une signature, un dialogue entre la matière et l'ambition de celui qui la porte.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
+                <!-- Card 1 -->
+                <div class="group relative flex flex-col border border-surface-container-highest p-3 sm:p-5 premium-hover reveal bg-surface-dim">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 sm:mb-6 relative">
+                        <img alt="Costume Rouge Flamboyant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxrndoTL7b-3DAdAuHYurhNrcKarl1i0dZA7yg9c2IIINmDVHCgMz4Gb_QkmSWaBiuY405QBLbhmAwG9bJfkM65sCylNm49alxv2VdpCvbbWhuuk5Tpapohc-Ev_fvllGWVGv9XdKJe6KeCharLgHHrp6fug3WZNdvmGRk9-4BX37fUaFyVFYULkf2ZDcIdW36kMsGfULR3iY6g39jNtmPBvbmhx5EJyT1U3vD5iLVroZ9NHgxqTdX3LvWW0xzbFL1ow"/>
+                    </div>
+                    <h3 class="font-headline text-base sm:text-2xl mb-1 sm:mb-2 line-clamp-1">Le Flamboyant</h3>
+                    <p class="text-secondary text-[11px] sm:text-base mb-4 sm:mb-8 line-clamp-2">Double boutonnage, une audace architecturale pour la scène urbaine.</p>
+                    <a class="mt-auto flex items-center justify-center gap-1 sm:gap-3 bg-transparent border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all py-2 sm:py-4 text-[10px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest w-full" href="https://wa.me/243000000000">
+                        <span class="material-symbols-outlined text-[14px] sm:text-lg">chat</span> 
+                        <span class="hidden sm:inline">Commander</span>
+                        <span class="sm:hidden">Acheter</span>
+                    </a>
+                </div>
+                <!-- Card 2 -->
+                <div class="group relative flex flex-col border border-surface-container-highest p-3 sm:p-5 premium-hover reveal delay-100 bg-surface-dim">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 sm:mb-6">
+                        <img alt="Costume Noir de Cérémonie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4WPms3n3gDRj1LZJ-30ejv0lxM5CSVPz3um77ifP2OezfS7bcPncJjgcK4HC8OkIcZW9DXIn1c4fdhT5c4KxK6oeVgVqj_CIDSiEOks6nvHHV7VQUNpJXl28LEzAQg9xDJWgr5fwbrowfD5dPweS0ZDIYDxaKInVdgNryLHITWk6fD_7aALJMkBJVKpMstqbujyWgLrXEurKAzKrGWRT7Jdfgd8GMtY8rVEVmCEIS9a5s2MgjaTNlXoka4cBBjJZGWQ"/>
+                    </div>
+                    <h3 class="font-headline text-base sm:text-2xl mb-1 sm:mb-2 line-clamp-1">Cérémonie Noire</h3>
+                    <p class="text-secondary text-[11px] sm:text-base mb-4 sm:mb-8 line-clamp-2">Le summum du raffinement pour les soirées les plus exclusives.</p>
+                    <a class="mt-auto flex items-center justify-center gap-1 sm:gap-3 bg-transparent border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all py-2 sm:py-4 text-[10px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest w-full" href="https://wa.me/243000000000">
+                        <span class="material-symbols-outlined text-[14px] sm:text-lg">chat</span> 
+                        <span class="hidden sm:inline">Commander</span>
+                        <span class="sm:hidden">Acheter</span>
+                    </a>
+                </div>
+                <!-- Card 3 -->
+                <div class="group relative flex flex-col border border-surface-container-highest p-3 sm:p-5 premium-hover reveal delay-200 bg-surface-dim">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 sm:mb-6">
+                        <img alt="Costume Gris Anthracite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTbO8FQG1AiOwY6zupOIOHkxoV4P2LIpHF5gyxgSZBAN1j8NU4EOicT9C1As9o55Vl4h3qigvtQgwgTjsRy5_IifaULkEYGaUD0ZAvTLu954qsj31ZPHnnmW2_Th5tXVl05T3Eo6qF5KBlAw8AMtT-Ws73jdP0abOjutF_3zkLTkLA0KMnAJq6trZCQhER53qq_yoOgG-j35ihONg5DZOr25NtKW67Wjo4HWG4Hj65WJQljNVep9tVH2Qiox3q5IAedg"/>
+                    </div>
+                    <h3 class="font-headline text-base sm:text-2xl mb-1 sm:mb-2 line-clamp-1">Gris Anthracite</h3>
+                    <p class="text-secondary text-[11px] sm:text-base mb-4 sm:mb-8 line-clamp-2">Une coupe épurée, une texture soyeuse, l'élégance du quotidien.</p>
+                    <a class="mt-auto flex items-center justify-center gap-1 sm:gap-3 bg-transparent border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all py-2 sm:py-4 text-[10px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest w-full" href="https://wa.me/243000000000">
+                        <span class="material-symbols-outlined text-[14px] sm:text-lg">chat</span> 
+                        <span class="hidden sm:inline">Commander</span>
+                        <span class="sm:hidden">Acheter</span>
+                    </a>
+                </div>
+                <!-- Card 4 -->
+                <div class="group relative flex flex-col border border-surface-container-highest p-3 sm:p-5 premium-hover reveal delay-200 bg-surface-dim">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 sm:mb-6">
+                        <img alt="Costume Gris Anthracite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="image/15.jpeg"/>
+                    </div>
+                    <h3 class="font-headline text-base sm:text-2xl mb-1 sm:mb-2 line-clamp-1">Costume Marron Chocolat</h3>
+                    <p class="text-secondary text-[11px] sm:text-base mb-4 sm:mb-8 line-clamp-2">Chaleur et distinction pour l'homme d'affaires visionnaire.</p>
+                    <a class="mt-auto flex items-center justify-center gap-1 sm:gap-3 bg-transparent border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all py-2 sm:py-4 text-[10px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest w-full" href="https://wa.me/243000000000">
+                        <span class="material-symbols-outlined text-[14px] sm:text-lg">chat</span> 
+                        <span class="hidden sm:inline">Commander</span>
+                        <span class="sm:hidden">Acheter</span>
+                    </a>
+                </div>
+                <!-- Card 5 -->
+                <div class="group relative flex flex-col border border-surface-container-highest p-3 sm:p-5 premium-hover reveal delay-200 bg-surface-dim">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 sm:mb-6">
+                        <img alt="Costume Gris Anthracite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="image/18.jpeg"/>
+                    </div>
+                    <h3 class="font-headline text-base sm:text-2xl mb-1 sm:mb-2 line-clamp-1">Veste Légère Militaire</h3>
+                    <p class="text-secondary text-[11px] sm:text-base mb-4 sm:mb-8 line-clamp-2">L'esprit aventurier rencontre la haute couture pour un look urbain.</p>
+                    <a class="mt-auto flex items-center justify-center gap-1 sm:gap-3 bg-transparent border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all py-2 sm:py-4 text-[10px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest w-full" href="https://wa.me/243000000000">
+                        <span class="material-symbols-outlined text-[14px] sm:text-lg">chat</span> 
+                        <span class="hidden sm:inline">Commander</span>
+                        <span class="sm:hidden">Acheter</span>
+                    </a>
+                </div>
+                <!-- Card 6 -->
+                <div class="group relative flex flex-col border border-surface-container-highest p-3 sm:p-5 premium-hover reveal delay-200 bg-surface-dim">
+                    <div class="aspect-[3/4] overflow-hidden mb-4 sm:mb-6">
+                        <img alt="Costume Gris Anthracite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="image/17.jpeg"/>
+                    </div>
+                    <h3 class="font-headline text-base sm:text-2xl mb-1 sm:mb-2 line-clamp-1">Ensemble Sport & T-shirt</h3>
+                    <p class="text-secondary text-[11px] sm:text-base mb-4 sm:mb-8 line-clamp-2">Détente sans compromis sur le style, le confort de l'élite.</p>
+                    <a class="mt-auto flex items-center justify-center gap-1 sm:gap-3 bg-transparent border border-primary/50 text-primary hover:bg-primary hover:text-black transition-all py-2 sm:py-4 text-[10px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest w-full" href="https://wa.me/243000000000">
+                        <span class="material-symbols-outlined text-[14px] sm:text-lg">chat</span> 
+                        <span class="hidden sm:inline">Commander</span>
+                        <span class="sm:hidden">Acheter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section class="py-20 md:py-32 bg-surface" id="concept">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+            <div class="order-2 md:order-1 grid grid-cols-2 gap-3 md:gap-6 reveal">
+                <div class="space-y-3 md:space-y-6">
+                    <div class="h-40 sm:h-60 md:h-80 w-full overflow-hidden border border-surface-container-highest">
+                        <img alt="Détail du tailleur" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOYKikW0M70oc_d2IgzMASZbT12Zs9DRQfP6AqMAVB3IY_3GEMESqI3zPHSQmCN5mN7eicXiwT1JXd29FngvJ_FR0sgClTV9yUPr0lF0Lgr7sF9AwWjBiWJjtUjrIyK6nILIOiKdLAkV3UkV3C4jygemNexv0-5noUXcjml3wScTTkBr5OnxYQDtMMv2fuFNR_rii83-CnhZYaLCR_PvDt0tU5J1SClrFjpmbgxjOb6d-jhSGc1zpFn0_ifWdKE3a2Pg"/>
+                    </div>
+                    <div class="h-32 sm:h-48 md:h-64 w-full overflow-hidden border border-primary">
+                        <img alt="Couture de précision" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSWY-aDT8QK0Gli772Uim5PxyTe_SAnwgOEd8lkG8gNIzJG0SATdN45jgUWQG-JMYB6gNiRd9WvfOO9ZwzAyGGvf4YwMBr2eYDmw3TUj1PWwqBg_KG7sMNSKep--Bl2XfRddKJBGUlrLnVpXgBpVz1Zj5aAQmbXJ00BHBNr-Tf3X-7T0-D77LVUWEmdfwosGDdO-AOVEUIik51c8XIgQXq8Tcqnz3xCpAjWAvmshvuAHf38kdh0v4GH8Pw0HZplKpszQ"/>
+                    </div>
+                </div>
+                <div class="pt-8 md:pt-12 space-y-3 md:space-y-6">
+                    <div class="h-32 sm:h-48 md:h-64 w-full overflow-hidden border border-surface-container-highest">
+                        <img alt="Mesure personnalisée" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXTIYvsG6SrCU51CSoaHq-90JakkgzD9RTSxw5vjLvREgABiz90guJI2BizyKlqkD6Nl7fg9ehAcli4PDv-yWS7lC6NHPcXf53OtOZJ-CGn1zQAu1OZHZUgsUw68ePADNO1tZUot-3p3GmI5YQpAALof1_ifkZzzKrkm1HbTcRXjgGzX0XIuMBoSQAvsOaTry-VDUQqkiYJb7_m-pOafvn5EJBF7c_EdgMxcWSoMOTECl7PbV1RkllYsc9mDM8z4cV7Q"/>
+                    </div>
+                    <div class="h-40 sm:h-60 md:h-80 w-full overflow-hidden border border-surface-container-highest">
+                        <img alt="Atelier Kinshasa" class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVUfDog-tSj0vT51WaLgExNNirw_BIyu87ABFClpPuvno45-Hb1L7OXuBkgRKMnO8_1iougobaDGBRMf4vwK8JyTf8AQYqdQ5zH4ylqGOUiauGMAa4YHoPXX6df4UTpVZRNPEcxLWts0q9Tdpdi7iq-MEQ-sQNiGZsekoDx4MvwB7uaOGEAZt47_iZ9hGKmpCA4nW9OPpHiPptF3Q0vR1TFKLoRo3qEYgHSCoIFQd7TBqmiey7BP8pU14IPwG0deu0Hg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-6 md:space-y-8 reveal delay-100">
+                <span class="text-primary text-xs md:text-sm font-bold uppercase tracking-[0.4em]">Le Savoir-Faire</span>
+                <h2 class="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold">L'Art du Tailleur</h2>
+                <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+                    Basé au cœur de Kinshasa, Étoile d'Afrique Mode perpétue une tradition d'excellence. Chaque point de couture est une promesse de durabilité et d'esthétique. Nous ne créons pas seulement des vêtements ; nous sculptons l'identité de l'homme africain moderne.
+                </p>
+                <ul class="space-y-4 md:space-y-6 pt-4">
+                    <li class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        <span class="text-sm md:text-base font-semibold uppercase tracking-wider">Tissus de luxe importés</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        <span class="text-sm md:text-base font-semibold uppercase tracking-wider">Coupe sur-mesure traditionnelle</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        <span class="text-sm md:text-base font-semibold uppercase tracking-wider">Héritage Sapeur réinventé</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 md:py-32 bg-surface-container-low border-t border-surface-container-highest relative overflow-hidden" id="contact">
+        <div class="absolute right-0 bottom-0 text-primary opacity-5 pointer-events-none translate-x-1/4 translate-y-1/4">
+            <span class="material-symbols-outlined" style="font-size: 400px; font-variation-settings: 'FILL' 1;">star</span>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+            <h2 class="font-headline text-4xl md:text-6xl font-bold mb-12 md:mb-20 reveal">Rendez-nous Visite</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 text-left mb-16 md:mb-24 reveal delay-100">
+                <div class="border-l-2 border-primary/30 pl-6 py-2">
+                    <h4 class="text-sm font-bold text-primary uppercase mb-3 tracking-widest">Atelier</h4>
+                    <p class="text-base text-secondary">Boulevard du 30 Juin,<br/>Gombe, Kinshasa, RDC</p>
+                </div>
+                <div class="border-l-2 border-primary/30 pl-6 py-2">
+                    <h4 class="text-sm font-bold text-primary uppercase mb-3 tracking-widest">Horaires</h4>
+                    <p class="text-base text-secondary">Lun - Sam: 09:00 - 18:00<br/>Dimanche: Sur RDV VIP</p>
+                </div>
+                <div class="border-l-2 border-primary/30 pl-6 py-2">
+                    <h4 class="text-sm font-bold text-primary uppercase mb-3 tracking-widest">Contact</h4>
+                    <p class="text-base text-secondary">+243 897 278 196<br/>mbisimaleetoile@gmail.com</p>
+                </div>
+            </div>
+            <div class="reveal delay-200 w-full flex justify-center">
+                <a class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 bg-primary-container text-on-primary-fixed px-8 py-5 md:px-16 md:py-7 text-sm md:text-xl font-bold uppercase tracking-[0.2em] hover:scale-105 hover:bg-primary active:scale-95 transition-all duration-300 w-full sm:w-auto" href="https://wa.me/243000000000">
+                    <span class="material-symbols-outlined text-3xl md:text-4xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+                    <span>Nous Contacter</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#050606] border-t border-surface-container-highest">
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-10 md:py-16 max-w-container-max mx-auto gap-8">
+        <div class="flex flex-col gap-3 items-center md:items-start">
+            <span class="font-headline text-2xl text-primary font-bold tracking-wider">ÉTOILE D'AFRIQUE</span>
+            <p class="text-on-surface-variant text-sm text-center md:text-left">© 2024 Étoile d'Afrique Mode.<br class="block sm:hidden"/> Tous droits réservés. Kinshasa, RDC.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs md:text-sm font-bold uppercase tracking-widest" href="#">WhatsApp</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs md:text-sm font-bold uppercase tracking-widest" href="#">Instagram</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs md:text-sm font-bold uppercase tracking-widest" href="#">Facebook</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // --- Menu Mobile ---
+    const menuBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('opacity-0', 'max-h-0');
+            mobileMenu.classList.add('opacity-100', 'max-h-[400px]');
+            menuBtn.innerHTML = 'close';
+        } else {
+            mobileMenu.classList.add('opacity-0', 'max-h-0');
+            mobileMenu.classList.remove('opacity-100', 'max-h-[400px]');
+            menuBtn.innerHTML = 'menu';
+        }
+    });
+
+    function closeMenu() {
+        isMenuOpen = false;
+        mobileMenu.classList.add('opacity-0', 'max-h-0');
+        mobileMenu.classList.remove('opacity-100', 'max-h-[400px]');
+        menuBtn.innerHTML = 'menu';
+    }
+
+    // --- Header Background ---
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            header.classList.add('bg-[#0A0A0A]/95', 'shadow-lg');
+            header.classList.remove('bg-surface/90');
+        } else {
+            header.classList.remove('bg-[#0A0A0A]/95', 'shadow-lg');
+            header.classList.add('bg-surface/90');
+        }
+    });
+
+    // --- Scroll Animations (Reveal) ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            revealObserver.observe(el);
+        });
+
+        // --- Active Menu Link on Scroll ---
+        const sections = document.querySelectorAll('section[id]');
+        const navLinksDesktop = document.querySelectorAll('.nav-link');
+        const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+
+                    // Gérer le menu Desktop
+                    navLinksDesktop.forEach(link => {
+                        link.classList.remove('text-primary', 'border-primary');
+                        link.classList.add('text-on-surface-variant', 'border-transparent');
+                        
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('text-primary', 'border-primary');
+                            link.classList.remove('text-on-surface-variant', 'border-transparent');
+                        }
+                    });
+
+                    // Gérer le menu Mobile
+                    navLinksMobile.forEach(link => {
+                        link.classList.remove('text-primary');
+                        link.classList.add('text-on-surface-variant');
+                        
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('text-primary');
+                            link.classList.remove('text-on-surface-variant');
+                        }
+                    });
+                }
+            });
+        }, {
+            // Déclenche le changement quand la section passe le milieu de l'écran
+            rootMargin: '-40% 0px -60% 0px' 
+        });
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+    });
+</script>
+</body>
+</html>
